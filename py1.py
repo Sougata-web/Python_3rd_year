@@ -4,6 +4,8 @@
 
 import time
 
+from datetime import datetime, timedelta
+
 #How to use decorators
 
 # def brew_tea():
@@ -93,12 +95,44 @@ import time
 # brew_tea()
 
 
+# def timer_dec(base_fn):
+#     def enhanced_fn(*args,**kwargs):
+#         start_time=time.time()
+#         base_fn(*args,**kwargs)
+#         end_time=time.time()
+#         print(f"Task time={end_time-start_time:.2f} seconds \n")
+#         time.sleep(1)
+#     return enhanced_fn
+
+# @timer_dec
+# def brew_tea():
+#     print("Brewing Tea...")
+#     time.sleep(1)
+#     print("Tea is ready.")
+ 
+# @timer_dec
+# def make_matcha(tea_type,steep_time):
+#     print(f'Making {tea_type} matcha tea...')
+#     time.sleep(steep_time)
+#     print("Matcha is ready")
+
+
+# if __name__=="__main__":
+#     start_time=time.time()
+#     make_matcha(tea_type="Green",steep_time=1)
+#     brew_tea()
+#     end_time=time.time()
+#     print(f"Total task time={end_time-start_time:.2f} seconds.\n")
+    
+
 def timer_dec(base_fn):
     def enhanced_fn(*args,**kwargs):
         start_time=time.time()
-        base_fn(*args,**kwargs)
+        result=base_fn(*args,**kwargs)
         end_time=time.time()
-        print(f"Task time={end_time-start_time} seconds \n")
+        print(f"Task time={end_time-start_time:.2f} seconds \n")
+        time.sleep(1)
+        return result
     return enhanced_fn
 
 @timer_dec
@@ -106,13 +140,21 @@ def brew_tea():
     print("Brewing Tea...")
     time.sleep(1)
     print("Tea is ready.")
+    print(f'Drink it by {datetime.now() +timedelta(minutes=30)}')
+
  
 @timer_dec
 def make_matcha(tea_type,steep_time):
     print(f'Making {tea_type} matcha tea...')
     time.sleep(steep_time)
     print("Matcha is ready")
-    
-make_matcha(tea_type="Green",steep_time=1)
-brew_tea()
+    print(f'Drink it by {datetime.now() +timedelta(minutes=45)}')
 
+
+
+if __name__=="__main__":
+    start_time=time.time()
+    brew_tea()
+    make_matcha(tea_type="Green",steep_time=1)
+    end_time=time.time()
+    print(f"Total task time={end_time-start_time:.2f} seconds.\n")
