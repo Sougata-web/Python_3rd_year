@@ -69,10 +69,34 @@ import time
 # brew_tea()
 
 
+# def timer_dec(base_fn):
+#     def enhanced_fn(*args):
+#         start_time=time.time()
+#         base_fn(*args)
+#         end_time=time.time()
+#         print(f"Task time={end_time-start_time} seconds \n")
+#     return enhanced_fn
+
+# @timer_dec
+# def brew_tea():
+#     print("Brewing Tea...")
+#     time.sleep(1)
+#     print("Tea is ready.")
+ 
+# @timer_dec
+# def make_matcha(tea_type,steep_time):
+#     print(f'Making {tea_type} matcha tea...')
+#     time.sleep(steep_time)
+#     print("Matcha is ready")
+    
+# make_matcha("Green",1)
+# brew_tea()
+
+
 def timer_dec(base_fn):
-    def enhanced_fn(*args):
+    def enhanced_fn(*args,**kwargs):
         start_time=time.time()
-        base_fn(*args)
+        base_fn(*args,**kwargs)
         end_time=time.time()
         print(f"Task time={end_time-start_time} seconds \n")
     return enhanced_fn
@@ -89,5 +113,6 @@ def make_matcha(tea_type,steep_time):
     time.sleep(steep_time)
     print("Matcha is ready")
     
-make_matcha("Green",1)
+make_matcha(tea_type="Green",steep_time=1)
 brew_tea()
+
