@@ -70,7 +70,7 @@
 # List comprehensions 
 # [(operation) (for var in) (org_list)]
 
-nums=[1,2,3,4,5]
+# nums=[1,2,3,4,5]
 
 # nums_squared=[]
 # for n in nums:
@@ -97,3 +97,46 @@ nums=[1,2,3,4,5]
 
 # tv_show_cap=[show.title() for show in tv_shows if len(show) >= 10]
 # print(tv_show_cap)
+
+# from time import time
+
+# start=time()
+# [n**2 for n in range(1,100000001)]
+# end=time()
+# print(f'The time: {end-start}')
+
+
+# startt=time()
+# squares=[]
+# for i in range(1,100000001):
+#     squares.append(i**2)
+# endd=time()
+# print(f'Time the loop taken: {endd-startt}')
+
+# nums=range(1,1000001)
+
+# result=[]
+# for n in nums:
+#     if n%2==0:
+#         square=n**2
+#         if square>10:
+#             result.append(square)
+            
+# print(result)
+
+# results=[n**2 for n in nums if n%2==0 and n**2>10]
+# print(results)
+
+numbers=[1,2,3]
+letters=['a','b','c']
+
+# for number in numbers:
+#     print(f'{number}{letters[0]}', end=' ')
+#     print(f'{number}{letters[1]}', end=' ')
+#     print(f'{number}{letters[2]}', end=' ')
+#     print()
+
+# for number in numbers:
+#     for letter in letters:
+#         print(f'{number}{letter}', end=' ')
+#     print()
