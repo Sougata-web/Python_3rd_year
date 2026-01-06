@@ -127,8 +127,8 @@
 # results=[n**2 for n in nums if n%2==0 and n**2>10]
 # print(results)
 
-numbers=[1,2,3]
-letters=['a','b','c']
+# numbers=[1,2,3]
+# letters=['a','b','c']
 
 # for number in numbers:
 #     print(f'{number}{letters[0]}', end=' ')
@@ -140,3 +140,15 @@ letters=['a','b','c']
 #     for letter in letters:
 #         print(f'{number}{letter}', end=' ')
 #     print()
+
+# lambda
+
+# def transform_list(nums_list, transform_item):
+#     transformed_0=transform_item(nums_list[0])
+#     transformed_1=transform_item(nums_list[1])
+#     return [transformed_0, transformed_1]
+
+# print(transform_list([2,3],lambda num:num**3))
+
+# nums_list=[2,3,4,5,6]
+# print(list(map(lambda num:num**3,nums_list)))
