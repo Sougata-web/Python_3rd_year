@@ -34,4 +34,18 @@
 # () :- Tuple 
 # {} :- Set
 
+#Dictonaries
 
+contacts={
+    'Bob':'ilvdog',
+    'Wendy':'ilvcat',
+    'Shibam':'ilvminors'
+}
+
+contacts['alex']='ilvnothing'
+contacts.pop('Wendy')
+
+for key in contacts.keys():
+    if key =='Alex'.lower():
+        print('Alex is in contacts')
+        print(contacts)
