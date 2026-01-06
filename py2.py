@@ -67,4 +67,33 @@
 # except ZeroDivisionError:
 #     print('Invalid Input. Please enter a non-zero denominator.')
 
-#
+# List comprehensions 
+# [(operation) (for var in) (org_list)]
+
+nums=[1,2,3,4,5]
+
+# nums_squared=[]
+# for n in nums:
+#     square=n**2
+#     nums_squared.append(square)
+    
+# print(nums_squared)
+
+# nums_squared=[n**2 for n in nums]
+# print(nums_squared)
+
+# tv_shows=['friends', 'PARKS AND RECREATION', 'the office', '30 rock', 'modern FAMILY']
+
+# tv_shows_cap=[]
+
+# for show in tv_shows:
+#     show_cap=show.title()
+#     tv_shows_cap.append(show_cap)
+    
+# print(tv_shows_cap)
+
+# tv_shows_cap=[show.title() for show in tv_shows]
+# print(tv_shows_cap)
+
+# tv_show_cap=[show.title() for show in tv_shows if len(show) >= 10]
+# print(tv_show_cap)
