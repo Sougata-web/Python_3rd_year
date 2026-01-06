@@ -36,16 +36,35 @@
 
 #Dictonaries
 
-contacts={
-    'Bob':'ilvdog',
-    'Wendy':'ilvcat',
-    'Shibam':'ilvminors'
-}
+# contacts={
+#     'Bob':'ilvdog',
+#     'Wendy':'ilvcat',
+#     'Shibam':'ilvminors'
+# }
 
-contacts['alex']='ilvnothing'
-contacts.pop('Wendy')
+# contacts['alex']='ilvnothing'
+# contacts.pop('Wendy')
 
-for key in contacts.keys():
-    if key =='Alex'.lower():
-        print('Alex is in contacts')
-        print(contacts)
+# for key in contacts.keys():
+#     if key =='Alex'.lower():
+#         print('Alex is in contacts')
+#         print(contacts)
+
+
+# Error handling
+
+# try:
+#     numerator=float(input("Enter numerator: "))
+#     denominator=float(input("Enter denominator: "))
+#     quotient=numerator/denominator
+#     print(f'The qoutient is {quotient}')
+    
+# # except:
+# #     print('Invalid Inputs')
+
+# except ValueError:
+#     print('Invalid inputs. Please enter a number.')
+# except ZeroDivisionError:
+#     print('Invalid Input. Please enter a non-zero denominator.')
+
+#
