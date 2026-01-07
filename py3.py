@@ -98,9 +98,9 @@ def slow_square(i)->int:
     squared:int=i*i
     return squared
 
-parallel_obj=Parallel(n_jobs=1)
+parallel_obj=Parallel(n_jobs=-1)
 
-my_squares.append(parallel_obj(delayed(slow_square)(i) for i in my_list))
+my_squares=parallel_obj(delayed(slow_square)(i) for i in my_list)
 
 print(my_squares)
 end=time.time()
