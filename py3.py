@@ -69,3 +69,39 @@
 
 # for i in tqdm(range(0,50),desc='Processing',bar_format=bar_format,colour='magenta'):
 #     time.sleep(0.1)
+
+# x:int=10
+# weather:str='Cloudy'
+# print(weather)
+
+# weather='sunny'
+# print(weather)
+# data:dict[str,int]={'bob':1,'sahil':2}
+# print(data)
+
+# def get_data()->dict[str,int]:
+#     return {'a':1,'b':2}
+
+# def greet_people(people:list[str])->None:
+#     for person in people:
+#         print(f'Hello, {person.capitalize()}!')
+        
+# greet_people(['Bob','James'])
+
+from joblib import Parallel,delayed
+import time
+
+my_list:list[int]=[1,2,3,4]
+my_squares:list[int]=[]
+start=time.time()
+def slow_square(i)->int:
+    squared:int=i*i
+    return squared
+
+parallel_obj=Parallel(n_jobs=1)
+
+my_squares.append(parallel_obj(delayed(slow_square)(i) for i in my_list))
+
+print(my_squares)
+end=time.time()
+print(f'Time used: {end-start}sec')
