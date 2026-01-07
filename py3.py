@@ -27,18 +27,45 @@
 
 # show()
 
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 
-sunny_days=[11,25,23,52,5,46,24,7,4,34,24,6]
-months=['jan','feb','mar','apr','may','jun','jul','aug','sept','oct','nov','dec']
+# sunny_days=[11,25,23,52,5,46,24,7,4,34,24,6]
+# months=['jan','feb','mar','apr','may','jun','jul','aug','sept','oct','nov','dec']
 
-avg_sunny_days=sum(sunny_days)/len(sunny_days)
+# avg_sunny_days=sum(sunny_days)/len(sunny_days)
 
-plt.plot(months,sunny_days,marker='o',color='red', label='Sunny Days')
-plt.title("Sunny Days by Months",fontsize=20)
-plt.xlabel("Months",fontsize=15)
-plt.ylabel("Sunny Days",fontsize=15)
-plt.axhline(avg_sunny_days, linestyle='--',color='cyan',label='Average')
-plt.legend()
+# plt.plot(months,sunny_days,marker='o',color='red', label='Sunny Days')
+# plt.title("Sunny Days by Months",fontsize=20)
+# plt.xlabel("Months",fontsize=15)
+# plt.ylabel("Sunny Days",fontsize=15)
+# plt.axhline(avg_sunny_days, linestyle='--',color='cyan',label='Average')
+# plt.legend()
 
-plt.show()
+# plt.show()
+
+# import time
+# from tqdm import tqdm
+
+# for i in tqdm(range(0,50),desc='Processing',bar_format='{desc}: |{bar}| {percentage:.1f}%'):
+#     time.sleep(0.1)
+
+# import time
+# from tqdm import tqdm
+
+# for i in tqdm(range(0,50)):
+#     time.sleep(0.1)
+
+
+# import time
+# from tqdm import tqdm
+
+# bar_format=(
+#     '{desc}: |{bar}| {percentage:.1f}%'
+#     '[ {n_fmt}/{total_fmt} iterations, '
+#     'Elapsed: {elapsed}, '
+#     'Remaining: {remaining}, '
+#     'Rate: {rate_fmt}]'
+# )
+
+# for i in tqdm(range(0,50),desc='Processing',bar_format=bar_format,colour='magenta'):
+#     time.sleep(0.1)
