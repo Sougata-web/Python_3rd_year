@@ -7,3 +7,10 @@
 # chai_variety=["Lemon","Masala","Ginger"]
 
 # print(" ".join(chai_variety))
+
+
+# text="Sougata"
+# print(text[::-1])
+
+# list_of_names=["Sougata","Bubai","Sonu"]
+# print(list_of_names[::-1])
