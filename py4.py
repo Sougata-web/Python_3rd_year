@@ -14,3 +14,10 @@
 
 # list_of_names=["Sougata","Bubai","Sonu"]
 # print(list_of_names[::-1])
+
+# str='a,b,c'
+# s=str.split(",")
+# print('After splitting', s)
+
+# result=", ".join(s)
+# print(result)
