@@ -226,9 +226,37 @@
 
 #  24. Write a python program to build basic chat interface using python GUI 
 
-import tkinter as tk
-root=tk.Tk()
-chat_box=tk.Text(root)
-chat_box.pack()
-root.mainloop()
-print('Chat GUI Initialized')
+# import tkinter as tk
+# root=tk.Tk()
+# chat_box=tk.Text(root)
+# chat_box.pack()
+# root.mainloop()
+# print('Chat GUI Initialized')
+
+#  Write a Python program to read student data from a CSV or Excel file 
+# then perform data analysis on the dataset like calculate mean of marks, 
+# find maximum and minimum marks, compute standard deviation. 
+# Visualize the data using different types of charts and plots like Line Plot 
+# (Name vs Marks) Bar Chart (Name vs Marks) Histogram (Marks 
+# Distribution) Scatter Plot (Age vs Marks). Also create Heatmap 
+# (Correlation between numerical variables) Pair Plot (Relationship 
+# between all variables).
+
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+df=pd.read_csv('data.csv') 
+
+print(df['marks'].mean())
+print(df['marks'].max())
+
+print(df['marks'].min())
+print(df['marks'].std())
+plt.plot(df['name'],df['marks'])
+sns.barplot(x='name',y='marks',data=df)
+sns.histplot(df['marks'])
+sns.scatterplot(x='age',y='marks',data=df)
+sns.heatmap(df.corr(),annot=True)
+sns.pairplot(df)
+plt.show()
