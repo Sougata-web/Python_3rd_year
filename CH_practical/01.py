@@ -242,21 +242,47 @@
 # (Correlation between numerical variables) Pair Plot (Relationship 
 # between all variables).
 
-import pandas as pd
-import seaborn as sns
-import matplotlib.pyplot as plt
+# import pandas as pd
+# import seaborn as sns
+# import matplotlib.pyplot as plt
 
-df=pd.read_csv('data.csv') 
+# df=pd.read_csv('data.csv') 
 
-print(df['marks'].mean())
-print(df['marks'].max())
+# print(df['marks'].mean())
+# print(df['marks'].max())
 
-print(df['marks'].min())
-print(df['marks'].std())
-plt.plot(df['name'],df['marks'])
-sns.barplot(x='name',y='marks',data=df)
-sns.histplot(df['marks'])
-sns.scatterplot(x='age',y='marks',data=df)
-sns.heatmap(df.corr(),annot=True)
-sns.pairplot(df)
-plt.show()
+# print(df['marks'].min())
+# print(df['marks'].std())
+# plt.plot(df['name'],df['marks'])
+# sns.barplot(x='name',y='marks',data=df)
+# sns.histplot(df['marks'])
+# sns.scatterplot(x='age',y='marks',data=df)
+# sns.heatmap(df.corr(),annot=True)
+# sns.pairplot(df)
+# plt.show()
+
+
+# 15. Write a python program to create a class that represent a shape. 
+# Include methods to calculate the area & perimeter. Implement subclasses 
+# for different shapes like circle, triangle and square.
+
+import math
+class Shape:
+    def area(self):pass
+    def perimeter(self):pass
+    
+class Square(Shape):
+    def __init__(self,side):self.side=side
+    def area(self):return self.side**2
+    def perimeter(self):
+        return self.side*4 
+class Circle(Shape):
+    def __init__(self,radius):self.radius=radius
+    def area(self):
+        return round(math.pi*self.radius*self.radius,2)
+    def perimeter(self):
+        return round(2*math.pi*self.radius,2)
+sq=Square(4)
+print(sq.area(),' ',sq.perimeter())
+cr=Circle(4)
+print(cr.area(),' ',cr.perimeter())
