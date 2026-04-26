@@ -143,16 +143,44 @@
 # tree. Include methods for inserting and searching elements in the binary 
 # tree. 
 
-# class Node:
-#     def __init__(self,key):
-#         self.left,self.right,self.val=None,None,key
-# def insert(root,key):
-#     if root is None:return Node(key)
-#     if root.val < key:root.right = self.insert(root.right, key)
-#     else:root.left=insert(root.left,key)
-# root=Node(50)
-# insert(root,30)
-# print('inserted')
+class Node:
+    def __init__(self,value):
+        self.left,self.right,self.value=None,None,value
+        
+    def insert(self,value):
+        if value < self.value:
+            if self.left is None:
+                self.left=Node(value)
+            else:
+                self.left.insert(value)
+
+        else:
+            if self.right is None:
+                self.right=Node(value)
+            else:
+                self.right.insert(value)
+
+    def find(self,value):
+        if value<self.value:
+            if self.left is None:
+                return False
+            else:
+                return self.left.find(value)
+        elif value>self.value:
+            if self.right is None:
+                return False
+            else:
+                return self.right.find(value)
+        else:
+            return True
+        
+tree=Node(10)
+tree.insert(1)
+tree.insert(4)
+tree.insert(45)
+tree.insert(19)
+print(tree.find(4))
+            
 
 # Write a python program to create a class representing a stack data 
 # structure. Include methods for pushing and popping elements. 
@@ -266,23 +294,23 @@
 # Include methods to calculate the area & perimeter. Implement subclasses 
 # for different shapes like circle, triangle and square.
 
-import math
-class Shape:
-    def area(self):pass
-    def perimeter(self):pass
+# import math
+# class Shape:
+#     def area(self):pass
+#     def perimeter(self):pass
     
-class Square(Shape):
-    def __init__(self,side):self.side=side
-    def area(self):return self.side**2
-    def perimeter(self):
-        return self.side*4 
-class Circle(Shape):
-    def __init__(self,radius):self.radius=radius
-    def area(self):
-        return round(math.pi*self.radius*self.radius,2)
-    def perimeter(self):
-        return round(2*math.pi*self.radius,2)
-sq=Square(4)
-print(sq.area(),' ',sq.perimeter())
-cr=Circle(4)
-print(cr.area(),' ',cr.perimeter())
+# class Square(Shape):
+#     def __init__(self,side):self.side=side
+#     def area(self):return self.side**2
+#     def perimeter(self):
+#         return self.side*4 
+# class Circle(Shape):
+#     def __init__(self,radius):self.radius=radius
+#     def area(self):
+#         return round(math.pi*self.radius*self.radius,2)
+#     def perimeter(self):
+#         return round(2*math.pi*self.radius,2)
+# sq=Square(4)
+# print(sq.area(),' ',sq.perimeter())
+# cr=Circle(4)
+# print(cr.area(),' ',cr.perimeter())
